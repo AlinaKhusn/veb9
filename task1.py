@@ -4,7 +4,18 @@
 
 
 # Здесь пишем код
-
+f = open('test_file/task1_data.txt', 'r', encoding="utf8")
+file = open("test_file/task1_answer.txt", "w", encoding='utf-8')
+for one_line in f.readlines():
+    S = []
+    for symbol in one_line:
+        if not symbol.isdigit():
+            S.append(symbol)
+    S = ''.join(S).strip()
+    file.write(S)
+    file.write('\n')
+f.close
+file.close
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
 
